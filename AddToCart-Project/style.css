@@ -1,0 +1,16 @@
+
+.box:hover{
+    scale: 1.03;
+    transition: 0.5s;
+}
+.box{
+    border-radius: 10px;
+    
+}
+body{
+    background-image: url('../AddToCart-Project/apple.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+   background-color: aliceblue;
+}

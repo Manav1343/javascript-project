@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cls.css">
+</head>
+<body>
+    <table class="main">
+       <tr>
+            <td colspan="3">
+                <input type="text" class="txt" id="zero">
+            </td>
+            <td>
+                <input type="button" value="c" id="zero" onclick="del()">
+            </td>
+       </tr>
+
+       <tr>
+           <td><input type="button" value="1" id="zero" onclick="display('1')"></td>
+           <td><input type="button" value="2" id="zero" onclick="display('2')"></td>
+            <td><input type="button" value="3" id="zero" onclick="display('3')"></td>
+            <td><input type="button" value="%" id="zero" onclick="display('%')"></td>
+       </tr>
+
+       <tr>
+        <td><input type="button" value="4" id="zero" onclick="display('4')"></td>
+        <td><input type="button" value="5" id="zero" onclick="display('5')"></td>
+        <td><input type="button" value="6" id="zero" onclick="display('6')"></td>
+        <td><input type="button" value="+" id="zero" onclick="display('+')"></td>
+      </tr>
+
+      <tr>
+        <td><input type="button" value="7" id="zero" onclick="display('7')"></td>
+        <td><input type="button" value="8" id="zero" onclick="display('8')"></td>
+        <td><input type="button" value="9" id="zero" onclick="display('9')"></td>
+        <td><input type="button" value="-" id="zero" onclick="display('-')"></td>
+     </tr>
+
+      <tr>
+        <td><input type="button" value="0" id="zero" onclick="display('0')"></td>
+        <td><input type="button" value="." id="zero" onclick="display('.')"></td>
+        <td><input type="button" value="00" id="zero" onclick="display('00')"></td>
+        <td><input type="button" value="=" id="zero" onclick="solve()"></td>
+     </tr> 
+    
+    </table>
+</body>
+</html>
+<script>
+    function display(val){
+        document.getElementById('zero').value += val
+    }
+
+    function solve(){
+        let m=document.getElementById('zero').value
+        let d=eval(m);
+        document.getElementById('zero').value = d
+    }
+
+    function del() {
+        document.getElementById('zero').value = ''
+        
+    }
+</script>
